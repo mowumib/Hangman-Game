@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <!-- <p>Find the hidden word</p> -->
+    <p>HINT: All words are tech related</p>
+
+
+    
+    <div class="game-container">
+        <div class="buttons" id="buttons"></div>
+        
+        <!-- Hangman rod -->
+        <svg height="250" width="250" class="hangman-container">
+            <line x1 = "60" y1 ="20" x2 ="140" y2 ="20"/>
+            <line x1 = "140" y1 ="20" x2 ="140" y2 ="50"/>
+            <line x1 = "60" y1 ="20" x2 ="60" y2 ="230"/>
+            <line x1 = "30" y1 ="230" x2 ="100" y2 ="230"/>
+
+        <!-- Hangman Head -->
+        <circle cx="140" cy="70" r="20" class="hangman-body"/>
+
+        <!-- Body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="hangman-body"/>
+        <!-- Arm -->
+        <line x1="140" y1="100" x2="120" y2="120" class="hangman-body"/>
+        <line x1="140" y1="100" x2="160" y2="120" class="hangman-body"/>
+        <!-- Leg -->
+        <line x1="140" y1="150" x2="120" y2="190" class="hangman-body"/>
+        <line x1="140" y1="150" x2="160" y2="190" class="hangman-body"/>
+
+        </svg>
+
+        
+        <!-- Word -->
+        <div class="word" id="word"></div>
+
+        <input type="text" name="guessword" class="guessinput" id="guessinput" maxlength="1" placeholder="Enter a letter">
+        <button id="guessbutton" class="guessbutton">Guess</button>
+
+        <!-- Wrong Letters -->
+        <div class="wrong-letters-container">
+            <div id="wrong-letters" class="wrong-letters"></div>
+        </div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="message"></h2>
+            <h3 id="reveal-word"></h3>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-container " id="notification-container">
+        <p>You have already entered this letter.<span>&#128129;&#127998;</span></p>
+       
+    </div>
+
+    <div class="invalid-letter-notification-container " id="invalid-letter-notification-container">
+        <p>Invalid letter.<span>&#128543;</span></p>
+    </div>
+    <script src="src/script.js"></script>
+    <script src="src/party.min.js"></script>
+</body>
+
+</html>  
