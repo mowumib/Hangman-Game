@@ -1,6 +1,3 @@
-import "./styles.css";
-"use strict";
-
 const wordEl = document.getElementById("word");
 const WrongLettersEL = document.getElementById("wrong-letters");
 const playAgainBtn = document.getElementById("play-button");
@@ -18,27 +15,8 @@ const invalidLetterNotification = document.getElementById(
 
 const hangmanFigure = document.querySelectorAll(".hangman-body");
 
-const words = [
-  "boolean",
-  "api",
-  "ascii",
-  "bug",
-  "char",
-  "objects",
-  "class",
-  "code",
-  "compilation",
-  "data",
-  "char",
-  "algorithm",
-  "argument",
-  "unit",
-  "testing",
-  "bytecode",
-  "character",
-  "refactor",
-  "comment"
-];
+const words = ["boolean", "api", "ascii", "bug", "char", "objects", "class", "code", "compilation",
+   "data", "char", "algorithm", "argument",  "unit", "testing", "bytecode", "character", "refactor", "comment"];
 
 let wordsLen = words.length;
 
@@ -141,7 +119,6 @@ guessBtn.addEventListener("click", () => {
   }
   letterInput.value = "";
 });
-
 
 // Play again Event
 playAgainBtn.addEventListener("click", () => {
