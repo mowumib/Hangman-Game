@@ -182,7 +182,7 @@ footer a:hover {
    color: rgb(187, 0, 255);
 }
 
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-width: 500px) {
     body {
       background-color: #fff;
     }
